@@ -1,0 +1,41 @@
+// Dummy project: Practice with array methods
+
+// 1. map(): Double each number in the array
+function doubleNumbers(arr) {
+  return arr.map(num => num * 2);
+}
+
+// 2. filter(): Get only odd numbers from the array
+function filterOddNumbers(arr) {
+  return arr.filter(num => num % 2 !== 0);
+}
+
+// 3. reduce(): Sum all numbers in the array
+function sumNumbers(arr) {
+  return arr.reduce((total, num) => total + num, 0);
+}
+
+// 4. forEach(): Print each item with its index
+function printItems(arr) {
+  arr.forEach((item, index) => {
+    console.log(`Item ${index + 1}: ${item}`);
+  });
+}
+
+// --- Example usage ---
+
+const numbers = [1, 2, 3, 4, 5];
+
+console.log("Original numbers:", numbers);
+
+const doubled = doubleNumbers(numbers);
+console.log("Doubled numbers:", doubled);
+
+const oddNumbers = filterOddNumbers(numbers);
+console.log("Odd numbers:", oddNumbers);
+
+const sum = sumNumbers(numbers);
+console.log("Sum of numbers:", sum);
+
+console.log("Print all items:");
+printItems(numbers);
